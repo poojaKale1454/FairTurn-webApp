@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FairTurn - Task Rotation Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>FairTurn <i class="fas fa-redo-alt"></i></h1>
+            <p>Your fun & fair task rotation tracker!</p>
+        </header>
+
+        <main class="app-main">
+            <section class="card settings-card">
+                <h2>Manage People & Tasks</h2>
+                <div class="input-section">
+                    <h3>Add New Person</h3>
+                    <div class="input-group">
+                        <input type="text" id="person-input" placeholder="Person's name">
+                        <button id="add-person-btn" class="colorful-btn primary-btn"><i class="fas fa-user-plus"></i> Add Person</button>
+                    </div>
+                </div>
+
+                <div class="input-section">
+                    <h3>Add New Task</h3>
+                    <div class="input-group task-input-group">
+                        <input type="text" id="task-input" placeholder="Task name">
+                        <select id="task-frequency">
+                            <option value="1">Daily</option>
+                            <option value="7">Weekly</option>
+                            <option value="custom">Custom (days)</option>
+                        </select>
+                        <input type="number" id="custom-frequency-input" placeholder="Days" min="1" style="display: none;">
+                        <button id="add-task-btn" class="colorful-btn success-btn"><i class="fas fa-clipboard-list"></i> Add Task</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card lists-card">
+                <div class="list-card">
+                    <h3><i class="fas fa-users"></i> Participants</h3>
+                    <ul id="people-list" class="list-display"></ul>
+                </div>
+                <div class="list-card">
+                    <h3><i class="fas fa-tasks"></i> All Tasks</h3>
+                    <ul id="all-tasks-list" class="list-display"></ul>
+                </div>
+            </section>
+
+            <section class="card assignments-card">
+                <h2>Today's Assignments <span id="current-date"></span></h2>
+                <div id="assignments-list" class="assignments-list"></div>
+                <button id="regenerate-btn" class="colorful-btn warning-btn"><i class="fas fa-sync-alt"></i> Regenerate Assignments</button>
+            </section>
+
+            <section class="card history-card">
+                <h2><i class="fas fa-history"></i> Task History</h2>
+                <ul id="history-list" class="list-display history-list"></ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
