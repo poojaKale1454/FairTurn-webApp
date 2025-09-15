@@ -19,16 +19,14 @@ Vibrant & Fun UI: A lively, colorful, and intuitive user interface makes managin
 💻 How to Use
 FairTurn is a static web application, so there's no complex server setup required.
 
-Clone the Repository:
-
+1]Clone the Repository:
 Bash
+git clone https://github.com/poojaKale1454/FairTurn-webApp.git
 
-git clone 
-Navigate to the Project Folder:
-
+2]3]Navigate to the Project Folder:
 Bash
-
 cd FairTurn
+
 Open the Application: Simply open the index.html file in your preferred web browser (like Chrome, Firefox, or Safari).
 
 That's it! You can now start adding people and tasks and let FairTurn handle the rest.
